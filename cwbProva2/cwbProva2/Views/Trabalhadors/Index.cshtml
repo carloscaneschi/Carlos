@@ -1,0 +1,69 @@
+﻿@model IEnumerable<cwbProva2.Models.Trabalhador>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Sexo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Endereco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataNascimento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CarteraTrabalho)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fonefixo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FoneCelular)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sexo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Endereco)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataNascimento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CarteraTrabalho)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fonefixo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FoneCelular)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Nome }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Nome }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Nome })
+        </td>
+    </tr>
+}
+
+</table>
